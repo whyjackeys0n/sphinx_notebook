@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'SphinxNotebook'
+project = "Jiacheng's Notebook"
 copyright = '2022, montague'
 author = 'montague'
 release = 'v1.0'

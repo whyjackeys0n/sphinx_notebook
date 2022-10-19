@@ -1,7 +1,7 @@
-ccc
+AIMD
 ==========================
 
 .. toctree::
    :maxdepth: 2
 
-   01/index
+   Visualization/index
