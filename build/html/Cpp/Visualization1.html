@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIMD &mdash; Jiacheng&#39;s Notebook v1.0 documentation</title>
+  <title>XDATCAR wrapping &mdash; Jiacheng&#39;s Notebook v1.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -39,11 +39,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../content/notes/notes.html">Installation</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">AIMD</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../content/aimd/visualization.html">XDATCAR wrapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">AIMD</a></li>
 </ul>
 
         </div>
@@ -60,9 +56,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>AIMD</li>
+      <li>XDATCAR wrapping</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/Cpp/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/Cpp/Visualization1.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -70,10 +66,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="aimd">
-<h1>AIMD<a class="headerlink" href="#aimd" title="Permalink to this heading"></a></h1>
-<div class="toctree-wrapper compound">
-</div>
+  <section id="xdatcar-wrapping">
+<h1>XDATCAR wrapping<a class="headerlink" href="#xdatcar-wrapping" title="Permalink to this heading"></a></h1>
+<section id="whether-xdatcar-is-wrapped">
+<h2>Whether XDATCAR is wrapped<a class="headerlink" href="#whether-xdatcar-is-wrapped" title="Permalink to this heading"></a></h2>
+<p>Projecting back to the first cell only happens in relaxations and MD simulations using <strong>MDALGO=0</strong>. For any <strong>MDALGO&gt;0</strong>, the atoms propagate freely.</p>
+<ol class="simple">
+<li><p>VASP forums - <a class="reference external" href="https://www.vasp.at/forum/viewtopic.php?t=17556">The ionic coordinates in XDATCAR is wrapped or unwrapped?</a></p></li>
+<li><p>VASP forums - <a class="reference external" href="https://www.vasp.at/forum/viewtopic.php?f=4&amp;t=18667">AIMD XDATCAR wrap and unwrap problems</a></p></li>
+</ol>
+</section>
+<section id="codes-for-xdatcar-unwrapping">
+<h2>Codes for XDATCAR unwrapping<a class="headerlink" href="#codes-for-xdatcar-unwrapping" title="Permalink to this heading"></a></h2>
+<ol class="simple">
+<li><p>From <a class="reference external" href="https://lirens-notebook.readthedocs.io/en/latest/scripts/python_scripts/python_msd.html">Liren Liu’s Notebook</a></p></li>
+<li><p>From <a class="reference external" href="http://home.ustc.edu.cn/~lipai/scripts/ml_scripts/xdat2xyz_unwraped.html">Pai Li’s Notebook</a></p></li>
+</ol>
+</section>
 </section>
 
 

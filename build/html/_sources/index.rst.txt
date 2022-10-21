@@ -7,10 +7,25 @@ Welcome to Jiacheng's notebook!
 ==========================================
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Contents:
+   :maxdepth: 1
+   :caption: Notes
 
-   Cpp/index
+   content/notes/notes
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: AIMD
+
+   content/aimd/xdatcar_unwrapping
+   content/aimd/visualization
+
+.. toctree::
+   :maxdepth: 1
+   :caption: NEB
+
+   content/neb/visualization
+
 
 
 

@@ -17,6 +17,7 @@ release = 'v1.0'
 # extensions = []
 # extensions = ['recommonmark','sphinx_markdown_tables']、
 extensions = ['recommonmark']
+source_suffix = ['.rst','.md']
 
 templates_path = ['_templates']
 exclude_patterns = []
