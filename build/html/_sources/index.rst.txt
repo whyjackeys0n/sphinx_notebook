@@ -19,6 +19,8 @@ Welcome to Jiacheng's notebook!
 
    content/aimd/xdatcar_unwrapping
    content/aimd/visualization
+   content/aimd/metadynamics
+   
 
 .. toctree::
    :maxdepth: 1
