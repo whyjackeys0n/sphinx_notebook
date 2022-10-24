@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Visualization" href="../neb/visualization.html" />
-    <link rel="prev" title="Visualization" href="visualization.html" /> 
+    <link rel="prev" title="XDATBUS (Visualization)" href="visualization.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,7 +46,7 @@
 <p class="caption" role="heading"><span class="caption-text">AIMD</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="xdatcar_unwrapping.html">XDATCAR Unwrapping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">XDATBUS (Visualization)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Metadynamics</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">NEB</span></p>
@@ -89,8 +89,8 @@
 <li><p>VASP wiki about metadynamics category [<a class="reference external" href="https://www.vasp.at/wiki/index.php/Category:Metadynamics">link</a>]</p></li>
 <li><p><a class="reference external" href="https://www.vasp.at/wiki/index.php/HILLS_H">HILLS_H</a> (Default = 10<sup>-3</sup> [Real]), sets the height of the Gaussian hills <em>h</em> (in eV)</p></li>
 <li><p><a class="reference external" href="https://www.vasp.at/wiki/index.php/HILLS_W">HILLS_W</a> (Default = 10<sup>-3</sup> [Real]), sets the width of the Gaussian hills <em>h</em> (in units of the corresponding collective variable)</p></li>
-<li><p><a class="reference external" href="https://www.vasp.at/wiki/index.php/HILLS_BIN">HILLS_BIN</a> (Default = <a class="reference external" href="https://www.vasp.at/wiki/index.php/NSW">NSW</a>, the number of steps in all ab-initio Molecular Dynamics runs [Integer]), sets the number of steps after which the bias potential is updated in a metadynamics run</p></li>
-<li><p><a class="reference external" href="https://www.vasp.at/wiki/index.php/SMASS">SMASS </a> (Default = -3), sets the velocities during an ab-initio molecular-dynamics run</p></li>
+<li><p><a class="reference external" href="https://www.vasp.at/wiki/index.php/HILLS_BIN">HILLS_BIN</a> (Default = <a class="reference external" href="https://www.vasp.at/wiki/index.php/NSW">NSW</a>  [Integer], the number of steps in all ab-initio Molecular Dynamics runs [Integer]), sets the number of steps after which the bias potential is updated in a metadynamics run</p></li>
+<li><p><a class="reference external" href="https://www.vasp.at/wiki/index.php/SMASS">SMASS </a> (Default = -3 [real] or -1, -2, -3), sets the velocities during an ab-initio molecular-dynamics run</p></li>
 </ol>
 <ul class="simple">
 <li><p>Notes: For a metadynamics run with Nose-Hoover thermostat, one has to set <a class="reference external" href="https://www.vasp.at/wiki/index.php/MDALGO">MDALGO</a> = 2, and choose an appropriate setting for SMASS. Scripts for calculating SMASS from Qijing Zheng’s personal website [<a class="reference external" href="https://qijingzheng.github.io/posts/NVT-MD/">description link</a>] [<a class="reference external" href="https://github.com/QijingZheng/pyband/blob/master/nose_mass.py">scrips link</a>]</p></li>
@@ -107,7 +107,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="visualization.html" class="btn btn-neutral float-left" title="Visualization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="visualization.html" class="btn btn-neutral float-left" title="XDATBUS (Visualization)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../neb/visualization.html" class="btn btn-neutral float-right" title="Visualization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
