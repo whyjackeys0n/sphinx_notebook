@@ -19,7 +19,9 @@
         <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Visualization" href="visualization.html" />
+    <link rel="prev" title="Notes" href="../notes/notes.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -39,7 +41,17 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../notes/notes.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes/notes.html">Notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">AIMD</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">XDATCAR Unwrapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metadynamics.html">Metadynamics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">NEB</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../neb/visualization.html">Visualization</a></li>
 </ul>
 
         </div>
@@ -68,13 +80,13 @@
              
   <section id="xdatcar-unwrapping">
 <h1>XDATCAR Unwrapping<a class="headerlink" href="#xdatcar-unwrapping" title="Permalink to this heading"></a></h1>
-<p><strong>Whether XDATCAR is wrapped</strong></p>
-<p>Projecting back to the first cell only happens in relaxations and MD simulations using <strong>MDALGO=0</strong>. For any <strong>MDALGO&gt;0</strong>, the atoms propagate freely.</p>
+<p><em><strong>Whether XDATCAR is wrapped</strong></em></p>
+<p>Projecting back to the first cell only happens in relaxations and MD simulations using <strong>MDALGO = 0</strong>. For any <strong>MDALGO &gt; 0</strong>, the atoms propagate freely.</p>
 <ol class="simple">
 <li><p>VASP forums - <a class="reference external" href="https://www.vasp.at/forum/viewtopic.php?t=17556">The ionic coordinates in XDATCAR is wrapped or unwrapped</a></p></li>
 <li><p>VASP forums - <a class="reference external" href="https://www.vasp.at/forum/viewtopic.php?f=4&amp;t=18667">AIMD XDATCAR wrap and unwrap problems</a></p></li>
 </ol>
-<p><strong>Codes for XDATCAR unwrapping</strong></p>
+<p><em><strong>Codes for XDATCAR unwrapping</strong></em></p>
 <ol class="simple">
 <li><p>From <a class="reference external" href="https://lirens-notebook.readthedocs.io/en/latest/scripts/python_scripts/python_msd.html">Liren Liu’s Notebook</a></p></li>
 <li><p>From <a class="reference external" href="http://home.ustc.edu.cn/~lipai/scripts/ml_scripts/xdat2xyz_unwraped.html">Pai Li’s Notebook</a></p></li>
@@ -84,7 +96,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../notes/notes.html" class="btn btn-neutral float-left" title="Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="visualization.html" class="btn btn-neutral float-right" title="Visualization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
