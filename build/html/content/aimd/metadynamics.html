@@ -80,15 +80,26 @@
              
   <section id="metadynamics">
 <h1>Metadynamics<a class="headerlink" href="#metadynamics" title="Permalink to this heading"></a></h1>
-<p><strong>VASP resources</strong></p>
+<p><em><strong>Videos</strong></em></p>
 <ol class="simple">
-<li><p>Videos from VASP youtube channel [<a class="reference external" href="https://www.youtube.com/watch?v=HVeamQOmM-s">link</a>]</p></li>
-<li><p>VASP wiki about metadynamics category [<a class="reference external" href="https://www.vasp.at/wiki/index.php/Category:Metadynamics">link</a>]</p></li>
+<li><p>Videos from VASP YouTube channel, <em>Advanced methods of molecular dynamics</em> [<a class="reference external" href="https://www.youtube.com/watch?v=HVeamQOmM-s">link</a>]</p></li>
 </ol>
+<p><em><strong>Parameters</strong></em></p>
+<ol class="simple">
+<li><p>VASP wiki about metadynamics category [<a class="reference external" href="https://www.vasp.at/wiki/index.php/Category:Metadynamics">link</a>]</p></li>
+<li><p><a class="reference external" href="https://www.vasp.at/wiki/index.php/HILLS_H">HILLS_H</a> (Default = 10<sup>-3</sup> [Real]), sets the height of the Gaussian hills <em>h</em> (in eV)</p></li>
+<li><p><a class="reference external" href="https://www.vasp.at/wiki/index.php/HILLS_W">HILLS_W</a> (Default = 10<sup>-3</sup> [Real]), sets the width of the Gaussian hills <em>h</em> (in units of the corresponding collective variable)</p></li>
+<li><p><a class="reference external" href="https://www.vasp.at/wiki/index.php/HILLS_BIN">HILLS_BIN</a> (Default = <a class="reference external" href="https://www.vasp.at/wiki/index.php/NSW">NSW</a>, the number of steps in all ab-initio Molecular Dynamics runs [Integer]), sets the number of steps after which the bias potential is updated in a metadynamics run</p></li>
+<li><p><a class="reference external" href="https://www.vasp.at/wiki/index.php/SMASS">SMASS </a> (Default = -3), sets the velocities during an ab-initio molecular-dynamics run</p></li>
+</ol>
+<ul class="simple">
+<li><p>Notes: For a metadynamics run with Nose-Hoover thermostat, one has to set MDALGO = 2, and choose an appropriate setting for SMASS. Scripts for calculating SMASS from Qijing Zheng’s personal website [<a class="reference external" href="https://qijingzheng.github.io/posts/NVT-MD/">description link</a>] [<a class="reference external" href="https://github.com/QijingZheng/pyband/blob/master/nose_mass.py">scrips link</a>]</p></li>
+</ul>
 <p><strong>Examples using VASP</strong></p>
 <ol class="simple">
-<li><p>Nuclephile Substitution CH3Cl - mMD2 [<a class="reference external" href="https://www.vasp.at/wiki/index.php/Nuclephile_Substitution_CH3Cl_-_mMD2">link</a>]</p></li>
-<li><p>Nuclephile Substitution CH3Cl - mMD1 [<a class="reference external" href="https://www.vasp.at/wiki/index.php/Nuclephile_Substitution_CH3Cl_-_mMD1">link</a>]</p></li>
+<li><p>Nuclephile Substitution CH3Cl - mMD1 [<a class="reference external" href="https://www.vasp.at/wiki/index.php/Nuclephile_Substitution_CH3Cl_-_mMD1">link</a>], using one collective variable</p></li>
+<li><p>Nuclephile Substitution CH3Cl - mMD2 [<a class="reference external" href="https://www.vasp.at/wiki/index.php/Nuclephile_Substitution_CH3Cl_-_mMD2">link</a>], using extra “repulsive potential walls”</p></li>
+<li><p>Nuclephile Substitution CH3Cl - mMD3 [<a class="reference external" href="https://www.vasp.at/wiki/index.php/Nuclephile_Substitution_CH3Cl_-_mMD3">link</a>], using two collective variables simultaneously</p></li>
 </ol>
 </section>
 
