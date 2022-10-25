@@ -26,6 +26,13 @@ Welcome to Jiacheng's Notebook!
    content/neb/visualization
 
 
+.. toctree::
+   :maxdepth: 1
+   :caption: NEB
+
+   content/fba/fba
+
+
 
 
 Indices and tables
