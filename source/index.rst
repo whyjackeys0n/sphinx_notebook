@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Jiacheng's notebook!
+Welcome to Jiacheng's Notebook!
 ==========================================
 *All models are wrong, but some are useful.* - George Box
 
