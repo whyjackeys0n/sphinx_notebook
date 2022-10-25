@@ -5,12 +5,9 @@
 
 Welcome to Jiacheng's notebook!
 ==========================================
+**All models are wrong, but some are useful.** - George Box
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Notes
-
-   content/notes/notes
+**Strait is the gate, and narrow is the way.** - Matthew 7:13–14
 
 
 .. toctree::
