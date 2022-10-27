@@ -28,10 +28,16 @@ Welcome to Jiacheng's Notebook!
 
 .. toctree::
    :maxdepth: 1
-   :caption: NEB
+   :caption: FBA
 
    content/fba/fba
 
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Py4Vasp
+
+   content/py4vasp/configuration
 
 
 
