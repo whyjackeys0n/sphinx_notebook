@@ -34,10 +34,18 @@ Configuration
    python -m pip install py4vasp
    ```
 
-2. There was a problem reported when `import py4vasp` [[link](https://www.vasp.at/forum/viewtopic.php?t=18626)], which caused by the incompatible version of `ipywidgets` (a python library of HTML interactive widgets for [IPython/Jupyter](http://jupyter.org/)) or `nglview` (An [IPython/Jupyter](http://jupyter.org/) widget to interactively view molecular structures and trajectories.)
+2. There was a problem reported when `import py4vasp` [[link](https://www.vasp.at/forum/viewtopic.php?t=18626)], which caused by the incompatible version of `ipywidgets` () or `nglview`.
 
    ```bash
    python -m pip install ipywidgets==7.6.1
    ```
 
-   
+
+
+
+> **_NOTE:_** `ipywidgets`: A python library of HTML interactive widgets for [IPython/Jupyter](http://jupyter.org/). [[link](https://ipywidgets.readthedocs.io/en/stable/)]
+>
+> ​			`nglview`: An [IPython/Jupyter](http://jupyter.org/) widget to interactively view molecular structures and trajectories. [[link](https://github.com/nglviewer/nglview)]
+>
+> ​			 
+
