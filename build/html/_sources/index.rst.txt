@@ -28,9 +28,10 @@ Welcome to Jiacheng's Notebook!
 
 .. toctree::
    :maxdepth: 1
-   :caption: FBA
+   :caption: DFBA
 
-   content/fba/fba
+   content/dfba/fba
+   content/dfba/dfba
 
 
 .. toctree::
