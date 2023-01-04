@@ -20,9 +20,15 @@ Welcome to Jiacheng's Notebook!
 
 .. toctree::
    :maxdepth: 1
-   :caption: NEB
+   :caption: Py4Vasp
 
-   content/neb/visualization
+   content/py4vasp/configuration
+
+.. toctree::
+   :maxdepth: 1
+   :caption: RBC Flow
+
+   content/rbc/configuration
 
 .. toctree::
    :maxdepth: 1
@@ -32,11 +38,6 @@ Welcome to Jiacheng's Notebook!
    content/dfba/dfba
 
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Py4Vasp
-
-   content/py4vasp/configuration
 
 
 

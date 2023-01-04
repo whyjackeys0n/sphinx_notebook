@@ -34,7 +34,7 @@ Configuration
    python -m pip install py4vasp
    ```
 
-2. There was a problem reported when `import py4vasp` [[link](https://www.vasp.at/forum/viewtopic.php?t=18626)], which caused by the incompatible version of `ipywidgets` () or `nglview`.
+2. There was a problem reported when `import py4vasp` [[link](https://www.vasp.at/forum/viewtopic.php?t=18626)], which caused by the incompatible version of `ipywidgets`  or `nglview`.
 
    ```bash
    python -m pip install ipywidgets==7.6.1

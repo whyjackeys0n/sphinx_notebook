@@ -19,8 +19,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Visualization" href="../rbc/Configuration.html" />
-    <link rel="prev" title="Metadynamics" href="../aimd/metadynamics.html" /> 
+    <link rel="next" title="FBA" href="../dfba/fba.html" />
+    <link rel="prev" title="Configuration" href="../py4vasp/configuration.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,12 +45,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../aimd/metadynamics.html">Metadynamics</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Py4Vasp</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../py4vasp/configuration.html">Configuration</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">RBC Flow</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../rbc/Configuration.html">Visualization</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Flux Balance Analysis</span></p>
 <ul>
@@ -74,7 +74,7 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Configuration</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/content/py4vasp/configuration.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/content/rbc/configuration.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -84,53 +84,28 @@
              
   <section id="configuration">
 <h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h1>
-<p><strong>Conda environment and configuration</strong></p>
-<ol>
-<li><p>Create and activate virtual environment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n env_name python
-conda activate env_name
-</pre></div>
-</div>
-</li>
-<li><p>Install <code class="docutils literal notranslate"><span class="pre">ipykernel</span></code> in the environment where the kernel needs to be added, <code class="docutils literal notranslate"><span class="pre">env_name</span></code> is the name of the virtual environment to use the kernel, and <code class="docutils literal notranslate"><span class="pre">kernel_name</span></code> is the name that will be displayed in JupyterLab</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install ipykernel
-python -m ipykernel install --user --name env_name --display <span class="s2">&quot;kernel name&quot;</span>
-</pre></div>
-</div>
-</li>
-<li><p>Check or uninstall the kernel</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter kernelspec list
-jupyter kernelspec uninstall kernel_name
-</pre></div>
-</div>
-</li>
+<p><strong>ESPResSo Documentation</strong></p>
+<ol class="simple">
+<li><p>ESPResSo home website [<a class="reference external" href="https://espressomd.org/wordpress/">link</a>]</p></li>
+<li><p>ESPResSo github website [<a class="reference external" href="https://github.com/espressomd/espresso">link</a>]</p></li>
+<li><p>ESPResSo documentation (v4.2.0) website [<a class="reference external" href="https://espressomd.github.io/doc4.2.0/index.html">link</a>]</p></li>
 </ol>
-<p><strong>Installation of py4vasp</strong></p>
-<ol>
-<li><p>Install using <code class="docutils literal notranslate"><span class="pre">pip</span></code> in the environment have been configured</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install py4vasp
-</pre></div>
-</div>
-</li>
-<li><p>There was a problem reported when <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">py4vasp</span></code> [<a class="reference external" href="https://www.vasp.at/forum/viewtopic.php?t=18626">link</a>], which caused by the incompatible version of <code class="docutils literal notranslate"><span class="pre">ipywidgets</span></code>  or <code class="docutils literal notranslate"><span class="pre">nglview</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install <span class="nv">ipywidgets</span><span class="o">==</span><span class="m">7</span>.6.1
-</pre></div>
-</div>
-</li>
+<p><strong>Installation</strong></p>
+<ol class="simple">
+<li><p>Execute <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code> and <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code> to prepare the installation of dependencies</p></li>
+<li><p>Generate <code class="docutils literal notranslate"><span class="pre">myconfig.hpp</span></code> file from the last build <code class="docutils literal notranslate"><span class="pre">myconfig-sample.hpp</span></code> for the installation.</p></li>
+<li><p>Rename the <code class="docutils literal notranslate"><span class="pre">myconfig-sample.hpp</span></code> file to <code class="docutils literal notranslate"><span class="pre">myconfig.hpp</span></code>, and uncomment <code class="docutils literal notranslate"><span class="pre">EXTERNAL_FORCES</span></code>，<code class="docutils literal notranslate"><span class="pre">MASS</span></code>，<code class="docutils literal notranslate"><span class="pre">EXCLUSIONS</span></code>，<code class="docutils literal notranslate"><span class="pre">LB_BOUNDARIES</span></code>，<code class="docutils literal notranslate"><span class="pre">SOFT_SPHERE</span></code>，<code class="docutils literal notranslate"><span class="pre">MEMBRANE_COLLISION</span></code> and <code class="docutils literal notranslate"><span class="pre">EXPERIMENTAL_FEATURES</span></code>. <code class="docutils literal notranslate"><span class="pre">EXPERIMENTAL_FEATURES</span></code> is the necessary module for <code class="docutils literal notranslate"><span class="pre">MEMBRANE_COLLISION</span></code>.</p></li>
+<li><p>Install ESPResSo using tar.gz format package with command <code class="docutils literal notranslate"><span class="pre">cmake</span></code>, <code class="docutils literal notranslate"><span class="pre">make</span></code> and <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">make</span> <span class="pre">install</span></code>.</p></li>
+<li><p>Samples can be directly run under the <code class="docutils literal notranslate"><span class="pre">sample</span></code> directory <code class="docutils literal notranslate"><span class="pre">~/software/espresso/samples/object_in_fluid</span></code> with command <code class="docutils literal notranslate"><span class="pre">pypresso</span></code>.</p></li>
 </ol>
-<blockquote>
-<div><p><strong><em>NOTE:</em></strong> <code class="docutils literal notranslate"><span class="pre">ipywidgets</span></code>: A python library of HTML interactive widgets for <a class="reference external" href="http://jupyter.org/">IPython/Jupyter</a>. [<a class="reference external" href="https://ipywidgets.readthedocs.io/en/stable/">link</a>]</p>
-<p>​			<code class="docutils literal notranslate"><span class="pre">nglview</span></code>: An <a class="reference external" href="http://jupyter.org/">IPython/Jupyter</a> widget to interactively view molecular structures and trajectories. [<a class="reference external" href="https://github.com/nglviewer/nglview">link</a>]</p>
-<p>​</p>
-</div></blockquote>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../aimd/metadynamics.html" class="btn btn-neutral float-left" title="Metadynamics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../rbc/Configuration.html" class="btn btn-neutral float-right" title="Visualization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../py4vasp/configuration.html" class="btn btn-neutral float-left" title="Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../dfba/fba.html" class="btn btn-neutral float-right" title="FBA" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
