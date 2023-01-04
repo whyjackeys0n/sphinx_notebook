@@ -17,7 +17,6 @@ Welcome to Jiacheng's Notebook!
    content/aimd/xdatcar_unwrapping
    content/aimd/visualization
    content/aimd/metadynamics
-   
 
 .. toctree::
    :maxdepth: 1
@@ -25,10 +24,9 @@ Welcome to Jiacheng's Notebook!
 
    content/neb/visualization
 
-
 .. toctree::
    :maxdepth: 1
-   :caption: DFBA
+   :caption: Flux Balance Analysis
 
    content/dfba/fba
    content/dfba/dfba

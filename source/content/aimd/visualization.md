@@ -8,10 +8,8 @@ XDATBUS (Visualization)
 When output XDATCAR using ASE package, the coordinates will be automatically wrapped back to the unit cell.
 
 ```python
-# Wrap Li and fix O, Ti and La in the raw XDATCAR files using ASE
 for i in range(mdrun):
     xdatcar = read("./xdatcar_files_raw/XDATCAR_" + str(i + 1), format='vasp-xdatcar', index=':')
-    # Fix the O, Ti and La atoms
     for s in range(len(xdatcar)):
         for oi in range(len(O_coord)):
             xdatcar[s].positions[O_index[oi]] = O_coord[oi]
@@ -19,7 +17,67 @@ for i in range(mdrun):
             xdatcar[s].positions[Ti_index[tii]] = Ti_coord[tii]
         for lai in range(len(La_coord)):
             xdatcar[s].positions[La_index[lai]] = La_coord[lai]
-    # Write the new wrapped XDATCAR file
     write("./xdatcar_files_wrap/XDATCAR_" + str(i + 1), format='vasp-xdatcar', images=xdatcar)
     print("XDATCAR_" + str(i + 1) + " is wrapped, fixed and duplicated.")
+```
+
+***STEP 2** **Aggregate the wrapped XDATCAR files***
+
+Combine the wrapped XDATCAR files into one XDATCAR file (XDATBUS) by using function `concatenate` in pymatgen.
+
+```python
+xdatbus = Xdatcar("./xdatcar_files_wrap/XDATCAR_1")
+for i in range(mdrun - 1):
+    xdatbus.concatenate("./xdatcar_files_wrap/XDATCAR_" + str(i + 2))
+    print("XDATCAR_" + str(i + 2) + " is concatenated.")
+xdatbus.write_file('XDATBUS')
+```
+
+***STEP 3** **Convert format from XDATCAR to xyz***
+
+Convert the XDATCAR file to xyz format by using the i/o function from the ASE package.
+
+```python
+xdatbusxyz = read('XDATBUS', format='vasp-xdatcar', index=':')
+write('XDATBUS.xyz', xdatbusxyz, format='xyz')
+```
+
+***STEP 4** **Unwrap and duplicate the xyz file***
+
+The unwrapping function was fulfilled by a separated function with i/o both in xyz format. Then, extract the O, Ti and La coordinates from the first image of the XDATCAR file.
+
+```python
+xyz_atoms = xyz[0].get_atomic_numbers()
+O_xyz_index = [i for i, x in enumerate(xyz_atoms) if x == 8]
+Ti_xyz_index = [i for i, x in enumerate(xyz_atoms) if x == 22]
+La_xyz_index = [i for i, x in enumerate(xyz_atoms) if x == 57]
+O_xyz_coord = xyz[0].positions[O_index]
+Ti_xyz_coord = xyz[0].positions[Ti_index]
+La_xyz_coord = xyz[0].positions[La_index]
+```
+
+Here is an example for simply deduplicating 8 times around the primitive cell.
+
+```python
+for s in range(len(xyz)):
+    for oi in range(len(O_xyz_coord)):
+        xyz[s].append(Atom(symbol='O', position=O_xyz_coord[oi] + [a, 0, 0]))
+        xyz[s].append(Atom(symbol='O', position=O_xyz_coord[oi] + [-a, 0, 0]))
+        xyz[s].append(Atom(symbol='O', position=O_xyz_coord[oi] + [0, 0, c]))
+        xyz[s].append(Atom(symbol='O', position=O_xyz_coord[oi] + [0, 0, -c]))
+        xyz[s].append(Atom(symbol='O', position=O_xyz_coord[oi] + [a, 0, c]))
+        xyz[s].append(Atom(symbol='O', position=O_xyz_coord[oi] + [a, 0, -c]))
+        xyz[s].append(Atom(symbol='O', position=O_xyz_coord[oi] + [-a, 0, c]))
+        xyz[s].append(Atom(symbol='O', position=O_xyz_coord[oi] + [-a, 0, -c]))
+```
+
+***STEP 5** **Remove the periodic boundary***
+
+It is recommended to remove the periodic boundary and lattice parameter to make the model more simple by changing the properties in ASE package.
+
+```python
+for s in range(len(xyz)):
+    xyz[s].cell = None
+    xyz[s].pbc = False
+write("./XDATRAIN.xyz", format='xyz', images=xyz)
 ```
